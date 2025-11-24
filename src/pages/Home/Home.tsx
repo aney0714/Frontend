@@ -1,4 +1,6 @@
-import * as S from "./HomeStyle";
+import { useNavigate } from "react-router-dom";
+import * as S from "./Home.style";
+
 import Header from "../../components/Header";
 import NavBar from "../../components/NavBar";
 
@@ -13,6 +15,12 @@ import Flower5 from "../../assets/six_leaf_flower.svg";
 import Flower6 from "../../assets/5_Dots.svg";
 
 export default function Home() {
+  const navigate = useNavigate();
+
+  const handleStartClick = () => {
+    navigate("/start");
+  };
+
   return (
     <S.Container>
       <Header />
@@ -33,7 +41,7 @@ export default function Home() {
 
         <img src={CharacterImg} className="Rebuild-character" />
 
-        <S.StartButton>START</S.StartButton>
+        <S.StartButton onClick={handleStartClick}>START</S.StartButton>
       </S.TopSection>
 
       <NavBar />

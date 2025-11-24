@@ -2,6 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppContainer from "./components/common/AppContainer";
 
 import Home from "./pages/Home/Home";
+import Start from "./pages/Home/Start";
+import MainPage from "./pages/Home/MainPage";
+
 // import OnBoarding from "./pages/OnBoarding/OnBoarding";
 
 function App() {
@@ -9,12 +12,11 @@ function App() {
     <BrowserRouter>
       <AppContainer>
         <Routes>
-          <Route path="/" element={<Home />} />
-
           {/* <Route path="/onboarding" element={<OnBoarding />} /> */}
 
-          {/* <Route path="/login" element={<Login />} /> */}
-          {/* <Route path="/profile" element={<Profile />} /> */}
+          <Route path="/" element={<Home />} />
+          <Route path="/start" element={<Start />} />
+          <Route path="/mainpage" element={<MainPage />} />
         </Routes>
       </AppContainer>
     </BrowserRouter>
