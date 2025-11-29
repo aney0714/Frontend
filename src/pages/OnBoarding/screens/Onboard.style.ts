@@ -111,7 +111,7 @@ export const Bubble = styled.div`
 `;
 
 export const LetterImage = styled.img`
-  margin-top: 32px;
+  margin-top: 20px;
   width: 200px;
   max-width: 70%;
 `;
@@ -119,16 +119,11 @@ export const LetterImage = styled.img`
 export const SpeechBubble = styled.div`
   position: relative;
   padding: 8px 26px;
-  //   width: 300px;
-  //   height: 35px;
+
   background: #fff;
   font-size: 13px;
   font-weight: 600;
   border-radius: 50px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   box-shadow: 2px 2px 14px 0px rgba(0, 0, 0, 0.12);
 
@@ -143,6 +138,15 @@ export const SpeechBubble = styled.div`
 
   &.speech1 {
     margin: 63px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.speech3 {
+    margin: 36px auto 0;
+    max-width: 80%;
+    text-align: center;
   }
 `;
 
@@ -161,6 +165,44 @@ export const SpeechTail = styled.div`
   border-top: 14px solid #ffffff;
 
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1));
+`;
+
+// Onboard3, 4
+export const MockUp = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 360px;
+  margin: 78px auto 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 공통 스타일 */
+  .phone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+  }
+
+  .p1 {
+    transform: translate(-80%, -66%);
+  }
+
+  .p2 {
+    transform: translate(-20%, -39%);
+  }
+
+  .p3 {
+    transform: translate(-80%, -39%);
+    z-index: 5;
+  }
+
+  .p4 {
+    transform: translate(-19%, -66%);
+  }
 `;
 
 // Onboard5

@@ -8,8 +8,8 @@ export default function Onboard2() {
     <S.Wrapper>
       <S.TopMessage>STEP BY STEP, YOU’RE MOVING FORWARD!</S.TopMessage>
       <S.SpeechBubble className="speech1">
-        <div>흘려보내고, 다시 세워가는 시간..</div>
-        <div className="black">함께해요 회원님</div>
+        <div>흘려보내고, 다시 세워가는 시간.. </div>
+        <div className="black"> 함께해요 회원님</div>
         <div>!</div>
         <S.SpeechTail />
       </S.SpeechBubble>

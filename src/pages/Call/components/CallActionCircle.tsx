@@ -1,0 +1,34 @@
+import * as S from "./CallActionCircle.style";
+
+import chatIcon from "../../../assets/chat_icon.svg";
+import callIcon from "../../../assets/call_icon.svg";
+import duoIcon from "../../../assets/duo_icon.svg";
+import mailIcon from "../../../assets/mail_icon.svg";
+
+type ActionButtonProps = {
+  label: string;
+  iconSrc: string;
+  alt: string;
+};
+
+export default function CallActionsRow() {
+  const actions: ActionButtonProps[] = [
+    { label: "메시지", iconSrc: chatIcon, alt: "메시지 아이콘" },
+    { label: "전화", iconSrc: callIcon, alt: "전화 아이콘" },
+    { label: "영상통화", iconSrc: duoIcon, alt: "영상통화 아이콘" },
+    { label: "메일", iconSrc: mailIcon, alt: "메일 아이콘" },
+  ];
+
+  return (
+    <S.Row>
+      {actions.map((action) => (
+        <S.Item key={action.label}>
+          <S.Button type="button">
+            <S.IconImg src={action.iconSrc} alt={action.alt} />
+          </S.Button>
+          <S.Label>{action.label}</S.Label>
+        </S.Item>
+      ))}
+    </S.Row>
+  );
+}

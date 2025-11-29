@@ -1,51 +1,88 @@
-// import * as S from "./CallPage.style";
+import { useState } from "react";
+import * as S from "./CallPage.style";
 
-// import Header from "../../components/Header";
-// import NavBar from "../../components/NavBar";
+import Header from "../../components/Header";
+import NavBar from "../../components/NavBar";
+import CallActionsCircle from "./components/CallActionCircle";
+import CallInfoCard from "./components/CallInfoCard";
 
-// import CallActionsCircle from "./components/CallActionCircle";
-// import CallInfoCard from "./components/CallInfoCard";
+import closeEditIcon from "../../assets/close_icon.svg";
+import penEditIcon from "../../assets/edit_icon.svg";
 
-// export default function CallPage() {
-//   // 하드코딩
-//   const name = "EX";
-//   const initial = "E";
-//   const phoneNumber = "010-0000-0000";
+export default function CallPage() {
+  const name = "EX";
+  const initial = "E";
+  const phoneNumber = "010-0000-0000";
 
-//   return (
-//     <S.Container>
-//       <Header />
+  const [isEditOpen, setIsEditOpen] = useState(false);
 
-//       <S.PageBody>
-//         <S.GradientArea>
-//           <S.EditBadge>편집</S.EditBadge>
+  const toggleEdit = () => {
+    setIsEditOpen((prev) => !prev);
+  };
 
-//           <S.ProfileCircle>
-//             <S.ProfileInitial>{initial}</S.ProfileInitial>
-//           </S.ProfileCircle>
+  return (
+    <S.Container>
+      <Header />
 
-//           <S.ProfileName>{name}</S.ProfileName>
+      <S.PageBody>
+        <S.GradientArea>
+          <S.EditBadge type="button" onClick={toggleEdit}>
+            편집
+          </S.EditBadge>
 
-//           <CallActionsCircle />
+          {isEditOpen && (
+            <S.EditDropdown>
+              <S.CloseRow>
+                <S.CloseIconCircle type="button" onClick={toggleEdit}>
+                  <S.CloseIconImg src={closeEditIcon} alt="편집 닫기" />
+                </S.CloseIconCircle>
+              </S.CloseRow>
 
-//           <S.InfoList>
-//             <CallInfoCard label="전화번호" value={phoneNumber} />
-//             <CallInfoCard label="메모" value="메모를 입력해 보세요" dimmed />
-//             <CallInfoCard
-//               label="메시지 보내기"
-//               value="카톡/문자를 보내볼까요?"
-//               dimmed
-//             />
-//             <CallInfoCard
-//               label="연락처 공유"
-//               value="친구에게 이 연락처를 공유해요"
-//               dimmed
-//             />
-//           </S.InfoList>
-//         </S.GradientArea>
-//       </S.PageBody>
+              <S.EditRow>
+                <S.EditDropName>{name}</S.EditDropName>
+                <S.EditIconCircle type="button" onClick={toggleEdit}>
+                  <S.EditIconImg src={penEditIcon} alt="편집 닫기" />
+                </S.EditIconCircle>
+              </S.EditRow>
 
-//       <NavBar />
-//     </S.Container>
-//   );
-// }
+              <S.EditRow>
+                <S.EditPreviewBox>프리뷰</S.EditPreviewBox>
+                <S.EditIconCircle type="button">
+                  <S.EditIconImg src={penEditIcon} alt="프로필 이미지 편집" />
+                </S.EditIconCircle>
+              </S.EditRow>
+
+              <S.EditRow>
+                <S.EditDropPhone>{phoneNumber}</S.EditDropPhone>
+                <S.EditIconCircle type="button">
+                  <S.EditIconImg src={penEditIcon} alt="연락처 편집" />
+                </S.EditIconCircle>
+              </S.EditRow>
+            </S.EditDropdown>
+          )}
+
+          <S.ProfileCircle>
+            <S.ProfileInitial>{initial}</S.ProfileInitial>
+          </S.ProfileCircle>
+
+          <S.ProfileName>{name}</S.ProfileName>
+
+          <CallActionsCircle />
+
+          <S.InfoList>
+            <CallInfoCard
+              label="전화번호"
+              value={phoneNumber}
+              bottomLabel="메모"
+              large
+            />
+
+            <CallInfoCard label="메시지 보내기" bottomLabel="연락처 공유" />
+          </S.InfoList>
+        </S.GradientArea>
+      </S.PageBody>
+
+      <NavBar />
+    </S.Container>
+  );
+}
