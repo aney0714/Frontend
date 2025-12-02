@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import * as S from "./MySecret.syle";
 
-import Header from "@/components/Header";
-import NavBar from "@/components/NavBar";
+import Header from "@/components/Header/Header";
+import NavBar from "@/components/NavBar/NavBar";
 
 import SecretLetterImg from "@/assets/Rebuild_character.svg";
 import SecretLogoImg from "@/assets/Rebuild_logo_3.svg";
