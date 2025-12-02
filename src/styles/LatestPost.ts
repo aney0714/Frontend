@@ -105,7 +105,7 @@ export const POST_content = styled.p`
 
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* 최대 3줄만 표시 (원하는 줄 수로 조정 가능) */
+  -webkit-line-clamp: 3; 
   -webkit-box-orient: vertical;
 `;
 

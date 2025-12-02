@@ -19,6 +19,7 @@ import KakaoTalk from "./pages/Letter/KakaoTalk";
 import CommunityWrite from "./pages/Community/CommunityWrite";
 import PostList from "./pages/Community/PostList";
 import Comments from "./pages/Community/Comments";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<OnBoarding />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/Login" element={<Login />} />
           <Route path="/kakao" element={<KakaoTalk />} />
           <Route path="/home" element={<Home />} />
           <Route path="/start" element={<Start />} />
