@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import * as S from "@/styles/Secret2";
+import * as S from "@/pages/Secret/Secret2style";
 
 import Header from "@/pages/Header/Header";
 

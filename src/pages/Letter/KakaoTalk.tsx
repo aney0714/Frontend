@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useCallback, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import * as S from "@/pages/Letter/KakaoTalk";
+import * as S from "@/pages/Letter/KakaoTalkstyle";
 
 import Header from "@/pages/Header/Header";
 

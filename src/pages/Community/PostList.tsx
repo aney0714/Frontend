@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import * as S from "@/styles/PostList";
+import * as S from "@/pages/Community/PostListstyle";
 
 import Header from "@/pages/Header/Header";
 

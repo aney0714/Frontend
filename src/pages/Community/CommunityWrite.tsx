@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom";
 
 import Header from "@/pages/Header/Header";
-import * as S from "@/styles/CommunityWrite";
+import * as S from "@/pages/Community/CommunityWritestyle";
 
 import Letter_Char from "@/assets/letter_charter.svg";
 import Back_white from "@/assets/arrow_back_white.svg";
