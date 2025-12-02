@@ -4,8 +4,6 @@
 
 </div>
 
-<br/>
-
 ## 🙋🏻‍♀️ RE:build의 FE Developer를 소개합니다!
 
 | <a href="https://github.com/aney0714"><img src="https://avatars.githubusercontent.com/u/202630964?v=4" width="120px;" alt=""/></a> | <a href="https://github.com/yangyangeeee"><img src="https://avatars.githubusercontent.com/u/156039054?v=4" width="120px;" alt=""/></a> |
