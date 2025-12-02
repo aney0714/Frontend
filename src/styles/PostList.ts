@@ -11,6 +11,7 @@ position:relative;
 align-items: center;
 
 `;
+
 export const BACK_Box=styled.div`
 width:100%;
 height:28px;

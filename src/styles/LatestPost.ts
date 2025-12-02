@@ -13,7 +13,7 @@ align-items: center;
 `;
 
 export const NewPost_BigBox =styled.div`
-margin-top:120px;
+margin-top:40px;
 
 width:360px;
 height:330px;
@@ -96,12 +96,12 @@ height:100%;
 width: 100%;
 color:#B0B9C2;
 font-size:10px;
- line-height: 1.4; /* 줄 간격을 설정하여 가독성 확보 */
+ line-height: 1.4; 
 
   
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* 최대 3줄만 표시 (원하는 줄 수로 조정 가능) */
+  -webkit-line-clamp: 3; 
   -webkit-box-orient: vertical;
 `;
 

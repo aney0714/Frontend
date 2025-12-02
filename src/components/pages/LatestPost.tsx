@@ -36,7 +36,7 @@ interface Post {
 const LatestPost = () =>{
     const [posts, setPosts] = useState<Post[]>([]); // 게시글 목록 데이터
     const [isLoading, setIsLoading] = useState<boolean>(true); // 로딩 상태
-    const [error, setError] = useState<string | null>(null); // 오류 메시지
+    const [error] = useState<string | null>(null); // 오류 메시지
 
     useEffect(() => {
         // 실제 API 요청을 시뮬레이션하기 위해 1.5초 지연

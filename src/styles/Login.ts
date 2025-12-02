@@ -7,7 +7,7 @@ height:956px;
 overflow:hidden;
 display:flex;
 flex-direction:column;
-justify-content:space-between  ;  
+  gap:70px;
 
 
 align-items: center;
@@ -148,18 +148,19 @@ height:360px;
 z-index:10;position: relative;
 margin-top:30px;
 `;
-//회원가입 정보창
-export const Signup_Box=styled.div`
+//로그인 정보창
+export const Login_Box=styled.div`
 width:300px;
-height:268px;
+
 z-index:20;
 border:2px solid white;
 border-radius:27px;
 display:flex;
 flex-direction:column;
-justify-content:  space-evenly;  
+justify-content:  center;  
 align-items: center;
-
+padding:30px 20px;
+gap:50px;
 `;
 
 export const INPUT_BOX=styled.div`
