@@ -7,7 +7,7 @@ import SockJS from "sockjs-client";
 import axios from "axios";
 
 import Header from "@/components/Header/Header";
-
+ 
 import STEP from "@/assets/Step by step, you’re moving forward!.svg";
 import BACK from "@/assets/arrow_back_pink.svg";
 import Tail from "@/assets/Polygon 4.svg";
