@@ -73,10 +73,8 @@ const PostList: React.FC = () => {
   };
 
   const handleGoClick = (id: number) => {
-    // 댓글/상세 페이지로 이동
-    navigate(`/community/comments/${id}`);
+    navigate(`/community/comments/${id}`); 
   };
-
   const isMoreButtonVisible = visibleCount < dataLength;
 
   return (

@@ -75,7 +75,7 @@ export const PostItem_box = styled.div`
   padding: 15px;
   position: relative;
   text-align: left;
-  cursor: pointer;
+ 
 `;
 
 export const Post_title = styled.div`

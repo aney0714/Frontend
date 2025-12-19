@@ -60,7 +60,6 @@ const Signup = () => {
         withCredentials: true,
       });
 
-      // ✅ 1. 중복 알림 문제 해결: 아래 로직을 한 번만 실행합니다.
       saveLoginInfo(formData.loginId, formData.nickname);
       
       // response.data가 객체일 수 있으므로 문자열만 추출하거나 기본 메시지 출력
@@ -68,13 +67,9 @@ const Signup = () => {
       navigate("/login");
 
     } catch (error) {
-      // ✅ 2. [Object object] 에러 메시지 해결
       if (axios.isAxiosError(error) && error.response) {
-        // 서버에서 보내주는 구체적인 에러 메시지가 있다면 그것을 사용하고, 없으면 기본 문구 출력
         const errorData = error.response.data;
         
-        // 보통 백엔드에서 { "message": "중복된 아이디입니다" } 형태로 보낼 때가 많습니다.
-        // 데이터 구조에 따라 errorData.message 혹은 errorData를 선택하세요.
         const errorMsg = typeof errorData === 'string' 
           ? errorData 
           : (errorData.message || "중복된 아이디거나 닉네임입니다.");
