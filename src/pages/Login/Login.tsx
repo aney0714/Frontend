@@ -9,7 +9,7 @@ import QurterFlower from "@/assets/four_leaf_flower_letter.svg";
 import Asterisk1 from "@/assets/Asterisk 1.svg";
 import SoftFlower from "@/assets/four_leaf_flower.svg";
 import fiveleaf from "@/assets/5_Dots.svg";
-import Smile from "@/assets/smile_ob.svg";
+import Smile from "@/assets/Smile_ob.svg";
 
 interface LoginForm {
   loginId: string;
